@@ -21,15 +21,7 @@
     <input type="text" id="fecha" placeholder="Ej: 25 de agosto 2026">
   </div>
   <div class="form-group">
-    <label>Hora de Inicio:</label>
-    <input type="text" id="horaInicio" placeholder="Ej: 8:00 am">
-  </div>
-  <div class="form-group">
-    <label>Hora de Fin:</label>
-    <input type="text" id="horaFin" placeholder="Ej: 4:00 pm">
-  </div>
-  <div class="form-group">
-    <label>Institución o Gerencia:</label>
+    <label>Gerencia o Institución:</label>
     <input type="text" id="institucion" placeholder="Ej: Hermandad de Samuel...">
   </div>
   <div class="form-group">
@@ -37,12 +29,12 @@
     <input type="text" id="ceco" placeholder="Ej: 10020304">
   </div>
   <div class="form-group">
-    <label>Descripción de Actividad:</label>
-    <textarea id="descripcion" rows="3"></textarea>
-  </div>
-  <div class="form-group">
     <label>Lugar:</label>
     <input type="text" id="lugar" placeholder="Ej: Cabimas, Parroquia Ambrosio. Av. Andrés Bello, Casa Cantio">
+  </div>
+  <div class="form-group">
+    <label>Descripción de la Actividad:</label>
+    <textarea id="descripcion" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label>Equipo Requerido:</label>
@@ -53,7 +45,7 @@
     <input type="text" id="responsable">
   </div>
   <div class="form-group">
-    <label>Teléfono:</label>
+    <label>Tlf Responsable:</label>
     <input type="text" id="telResponsable" placeholder="Ej: 0412-1656176">
   </div>
 
@@ -64,12 +56,10 @@
       const numeroAdmin = "584166609212"; 
 
       const fecha = document.getElementById('fecha').value;
-      const horaInicio = document.getElementById('horaInicio').value;
-      const horaFin = document.getElementById('horaFin').value;
       const institucion = document.getElementById('institucion').value;
       const ceco = document.getElementById('ceco').value;
-      const descripcion = document.getElementById('descripcion').value;
       const lugar = document.getElementById('lugar').value;
+      const descripcion = document.getElementById('descripcion').value;
       const equipo = document.getElementById('equipo').value;
       const responsable = document.getElementById('responsable').value;
       const telResponsable = document.getElementById('telResponsable').value;
@@ -77,20 +67,18 @@
       const mensaje = `*Datos para solicitud de Servicios de Transporte*
 
 *Fecha:* ${fecha}
-*Hora de inicio:* ${horaInicio}
-*Hora de Fin:* ${horaFin}
 
-*Institución o gerencia:* ${institucion}
+*Gerencia o Institución:* ${institucion}
 *Ceco:* ${ceco}
 
-*Descripción de Actividad:* ${descripcion}
-
 *Lugar:* ${lugar}
+
+*Descripción de la Actividad:* ${descripcion}
 
 *Equipo Requerido:* ${equipo}
 
 *Responsable:* ${responsable}
-*Teléfono:* ${telResponsable}`;
+*Tlf Responsable:* ${telResponsable}`;
 
       const url = `https://wa.me/${numeroAdmin}?text=${encodeURIComponent(mensaje)}`;
       window.open(url, '_blank');
