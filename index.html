@@ -33,6 +33,10 @@
     <input type="text" id="institucion" placeholder="Ej: Hermandad de Samuel...">
   </div>
   <div class="form-group">
+    <label>Ceco:</label>
+    <input type="text" id="ceco" placeholder="Ej: 10020304">
+  </div>
+  <div class="form-group">
     <label>Descripción de Actividad:</label>
     <textarea id="descripcion" rows="3"></textarea>
   </div>
@@ -63,6 +67,7 @@
       const horaInicio = document.getElementById('horaInicio').value;
       const horaFin = document.getElementById('horaFin').value;
       const institucion = document.getElementById('institucion').value;
+      const ceco = document.getElementById('ceco').value;
       const descripcion = document.getElementById('descripcion').value;
       const lugar = document.getElementById('lugar').value;
       const equipo = document.getElementById('equipo').value;
@@ -76,6 +81,7 @@
 *Hora de Fin:* ${horaFin}
 
 *Institución o gerencia:* ${institucion}
+*Ceco:* ${ceco}
 
 *Descripción de Actividad:* ${descripcion}
 
