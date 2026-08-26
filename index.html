@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <h2>Solicitud de Servicio de Transporte Terrestre Lagunillas</h2>
+  <h2>Solicitud de Servicio de Transporte</h2>
 
   <div class="form-group">
     <label>Fecha:</label>
@@ -42,11 +42,11 @@
   </div>
   <div class="form-group">
     <label>Solicitante:</label>
-    <input type="text" id="responsable">
+    <input type="text" id="solicitante">
   </div>
   <div class="form-group">
     <label>Tlf Solicitante:</label>
-    <input type="text" id="telResponsable" placeholder="Ej: 0412-1656176">
+    <input type="text" id="telSolicitante" placeholder="Ej: 0412-1656176">
   </div>
 
   <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
@@ -62,9 +62,9 @@
       const descripcion = document.getElementById('descripcion').value;
       const equipo = document.getElementById('equipo').value;
 
-      // Se corrigió agregando .value a ambos campos:
-      const Solicitante = document.getElementById('responsable').value;
-      const telSolicitante = document.getElementById('telResponsable').value;
+      // Coincidencia exacta de IDs con los del HTML:
+      const solicitante = document.getElementById('solicitante').value;
+      const telSolicitante = document.getElementById('telSolicitante').value;
 
       const mensaje = `*Datos para solicitud de Servicios de Transporte*
 
@@ -79,7 +79,7 @@
 
 *Equipo Requerido:* ${equipo}
 
-*Solicitante:* ${Solicitante}
+*Solicitante:* ${solicitante}
 *Tlf Solicitante:* ${telSolicitante}`;
 
       const url = `https://wa.me/${numeroAdmin}?text=${encodeURIComponent(mensaje)}`;
